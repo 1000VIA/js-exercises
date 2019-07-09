@@ -8,11 +8,11 @@
 */
 
 function convertToUSD(price) {
-    return price * 1;
+    return (price * 1.4) + (price * 0.01);
 }
 
 function convertToBRL(price) {
-    return price * 1;
+    return (price + 0.01) + (price * 0.01);
 }
 
 

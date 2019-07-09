@@ -6,7 +6,11 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+    //arr = [1, 3, 3];
+    let position = arr.indexOf(valueToReplace)
+    let newArr = [...arr] //copia del arreglo original
+    newArr[position] = newValue
+    return newArr; // complete this statement
 }
 
 /* 
@@ -15,19 +19,19 @@ function replace(arr, valueToReplace, newValue) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 3, 2);
-var newNames = replace(arr, "Ashleigh", "Rares");
+var newNumbers = replace(numbers, 3, 2);
+
+var newNames = replace(names, "Ashleigh", "Rares");
 
 console.log(numbers);
 console.log(newNumbers);
 console.log(names);
 console.log(newNames);
 
-/* 
-  EXPECTED RESULT
-  ---------------
-  [1, 3, 3]
-  [1, 2, 3]
-  [Irina, Ashleigh, Mozafar]
-  [Irina, Rares, Mozafar]
-*/
+
+// EXPECTED RESULT
+// ---------------
+// [1, 3, 3]
+// [1, 2, 3]
+// [Irina, Ashleigh, Mozafar]
+// [Irina, Rares, Mozafar]
