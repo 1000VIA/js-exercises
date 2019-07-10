@@ -138,9 +138,16 @@ var streetNames = [
     "White Hart Court", "White Hart Street", "White Horse Yard", "White Kennett Street",
     "White Lion Court", "White Lion Hill", "White Lyon Court", "Whittington Avenue",
     "Widegate Street", "Willoughby Highwalk", "Wilson Street", "Wine Office Court",
-    "Wood Street", "Wormwood Street", "Wrestler's Court"];
+    "Wood Street", "Wormwood Street", "Wrestler's Court"
+];
 
-var laneNames;  // Complete this line
+function lane(element) {
+    if (element.indexOf('Lane') > -1) {
+        return true;
+    }
+}
+
+var laneNames = streetNames.filter(lane); // Complete this line
 
 console.log(laneNames);
 console.log(laneNames.length);

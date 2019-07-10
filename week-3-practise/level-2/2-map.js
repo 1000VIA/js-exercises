@@ -6,15 +6,29 @@ of the students who have attended AT LEAST 8 classes.
 */
 
 var attendances = [
-  ["Ahmed", 8],
-  ["Clement", 10],
-  ["Elamin", 6],
-  ["Adam", 7],
-  ["Tayoa", 11],
-  ["Nina", 10]
+    ["Ahmed", 8],
+    ["Clement", 10],
+    ["Elamin", 6],
+    ["Adam", 7],
+    ["Tayoa", 11],
+    ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendances.map(function eligibleStudentNames(attendance) {;
+    if (attendance[1] >= 8) {
+        return attendance[0];
+    }
+});
+
+eligibleStudentNames = eligibleStudentNames.filter(element => element !== undefined) // TODO: Complete this line.
+
+// function a(element) {
+//     if (element !== undefined) {
+//         return element;
+//     }
+// }
+
+
 
 console.log(eligibleStudentNames);
 

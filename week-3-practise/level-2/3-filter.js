@@ -11,21 +11,27 @@ Continuing on from exercise level-1/2-every.js
 */
 
 var voyagers = [
-  "Adam family",
-  "Potter family",
-  "Eric",
-  "Aldous",
-  "Button family",
-  "Jude",
-  "Carmichael",
-  "Bunny",
-  "Asimov",
-  "Oscar family",
-  "Avery family",
-  "Archer family"
+    "Adam family",
+    "Potter family",
+    "Eric",
+    "Aldous",
+    "Button family",
+    "Jude",
+    "Carmichael",
+    "Bunny",
+    "Asimov",
+    "Oscar family",
+    "Avery family",
+    "Archer family"
 ];
 
-var colonisers; // Complete this statement
+var colonisers = voyagers.map(function Alpha(element) {
+    if (element[0].charAt(0) === 'A' && (element.indexOf('family') > -1)) {
+        return element;
+    }
+}); // Complete this statement
+
+colonisers = colonisers.filter(element => element !== undefined)
 
 console.log(colonisers);
 

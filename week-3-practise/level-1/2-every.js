@@ -11,19 +11,35 @@
 var bush1BerryColours = ["pink", "pink", "pink", "neon", "pink", "transparent"];
 var bush2BerryColours = ["pink", "pink", "pink", "pink"];
 
-var bush1SafeToEat; //Complete this statement
-var bush2SafeToEat; //Complete this statement
+// function colorRosa(element) {
+//     return element === "pink";
+// }
+// var bush1SafeToEat = bush1BerryColours.every(colorRosa); //Complete this statement
+
+
+// function colorRosa1(element) {
+//     return element === "pink";
+// }
+// var bush2SafeToEat = bush2BerryColours.every(colorRosa1);
+
+var bush1SafeToEat = bush1BerryColours.every((element) => {
+    return element === "pink";
+});
+
+var bush2SafeToEat = bush2BerryColours.every((element) => {
+    return element === "pink";
+}); //Complete this statement
 
 if (bush1SafeToEat) {
-  console.log("Bush 1 is safe to eat from");
+    console.log("Bush 1 is safe to eat from");
 } else {
-  console.log("Toxic! Leave bush 1 alone");
+    console.log("Toxic! Leave bush 1 alone");
 }
 
 if (bush2SafeToEat) {
-  console.log("Bush 2 is safe to eat");
+    console.log("Bush 2 is safe to eat");
 } else {
-  console.log("Toxic! Leave bush 2 alone");
+    console.log("Toxic! Leave bush 2 alone");
 }
 
 /*

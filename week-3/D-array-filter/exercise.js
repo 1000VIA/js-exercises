@@ -15,14 +15,9 @@ var pairsByIndexRaw = [
 var pairsByIndex = pairsByIndexRaw.filter(filtrar); // Complete this statement
 
 function filtrar(element) {
-    console.log('este es el elemento ' + element);
-
     if (Array.isArray(element)) {
-        console.log(element)
         if (element.length > 1) {
-            console.log(element);
-
-            return element
+            return true;
         }
     }
 

@@ -6,13 +6,15 @@ Note: only the names should be printed, not the means of transport.
 */
 
 var londonLocations = [
-  ["Angel", "tube", "bus"],
-  ["London Bridge", "tube", "bus", "river boat"],
-  ["Tower bridge", "tube", "bus"],
-  ["Greenwich", "tube", "bus", "river boat"]
+    ["Angel", "tube", "bus"],
+    ["London Bridge", "tube", "bus", "river boat"],
+    ["Tower bridge", "tube", "bus"],
+    ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
+var locationsByBoat = londonLocations.map(Element => Element).filter(Element => Element.indexOf("river boat") > -1)
+
+locationsByBoat = locationsByBoat.map(Element => Element[0]);
 
 console.log(locationsByBoat);
 
