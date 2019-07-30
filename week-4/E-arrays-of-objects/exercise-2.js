@@ -1,7 +1,6 @@
 /* 
 An array of travel destinations is defined below.
 Each destination has a name, a distance from Glasgow, and a list of transportations available to go there.
-
 1) Filter the travelDestinations array to return all destination names reachable within 500 kms.
 2) Find a destination name reachable by ferry.
 3) Print in the console all the destination names more than 300 kms far away and reachable by train.
@@ -39,12 +38,22 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+function travelDestination(destination) {
+    return destination.distanceKms <= 500;
+}
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(travelDestination).map(destination => destination.destinationName);
+// Complete here
 
-var destinationNameReachableByFerry = // Complete here
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNameReachableByFerry = travelDestinations.find(transportation => transportation.transportations.includes('ferry')).destinationName
+    // Complete here
+
+function travelDestinationTrain(transportation) {
+    return (transportation.distanceKms > 300 && (transportation.transportations.includes('train')));
+}
+
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(travelDestinationTrain).map(destination => destination.destinationName) // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

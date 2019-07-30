@@ -43,8 +43,21 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-
-
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
-console.log(PasswordValidationResult)
+let expresionRegular1 = /[0-9]/;
+let expresionRegular2 = /[a-z]/;
+let expresionRegular3 = /[A-Z]/;
+let expresionRegular4 = /[!, #, $, %, .]/
+
+PasswordValidationResult1 = password.map(element => expresionRegular1.test(element) && expresionRegular2.test(element) && expresionRegular3.test(element) && element.length > 5);
+
+PasswordValidationResult2 = password.map(element => expresionRegular1.test(element) && expresionRegular2.test(element) && expresionRegular3.test(element) && element.length > 5 && expresionRegular4.test(element));
+
+PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
+
+PasswordValidationResult3 = password.map(element => expresionRegular1.test(element) && expresionRegular2.test(element) && expresionRegular3.test(element) && element.length > 5 && expresionRegular4.test(element) && !PreviousPassword.includes(element));
+
+console.log(PasswordValidationResult1);
+console.log(PasswordValidationResult2);
+console.log(PasswordValidationResult3);

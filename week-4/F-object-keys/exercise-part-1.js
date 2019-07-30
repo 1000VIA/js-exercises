@@ -6,18 +6,22 @@ You're going to have to used what we learned at the start of this lesson, and so
 
 */
 
-var mentorsAges = {
-  james: 29,
-  JOSH: 35,
-  JAMIE: 25,
-  Mozafar: 30
+let mentorsAges = {
+    james: 29,
+    JOSH: 35,
+    JAMIE: 25,
+    Mozafar: 30
 };
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+let mentorsNames = Object.keys(mentorsAges);
+let mentorsNamedCapitalised = mentorsNames.map(mentorsName => mentorsName.toUpperCase());
 
-var mentorsNamedCapitalised = ;
+// let mentorsNamedCapitalised = [];
+// for (i in mentorsAges) {
+//     mentorsNamedCapitalised.push(i.toUpperCase());
+// }
 
 // ONLY EDIT ABOVE THIS LINE
 

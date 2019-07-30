@@ -13,7 +13,7 @@ Here is an example output for using `.keys()`:
 ```js
 var footballClubs = {
   chelsea_fc: 'England',
-  fc_barcelona: 'Spain',
+  fc_barcelona: 'Spain', 
   ac_milan: 'Italy'
 };
 

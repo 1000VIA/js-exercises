@@ -6,7 +6,7 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-var groupIsOnlyStudents = group.every((element) => {
+var groupIsOnlyStudents = group.every(element => {
 
     return students.includes(element);
 

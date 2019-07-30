@@ -5,7 +5,7 @@
 */
 
 /*
-  EXERCISE 1
+  EXERCISE 1 
   =======
 
   Write a function that inserts your name into the #exercise1 element when
@@ -14,11 +14,22 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
+// document.querySelector('#button1').addEventListener('click', exercise1)
 
-function exercise1() {
-  // Write your implementation here
-}
+// function exercise1() {
+//     let myName = document.querySelector('#button1');
+//     myName.innerHTML = 'Milvia Alvarez Zabala' // Write your implementation here
+// }
+
+let button = document.querySelector('#button1');
+
+let myName = document.querySelector('#exercise1')
+
+button.addEventListener('click', function() {
+    myName.innerHTML = 'Milvia Alvarez Zabala'
+})
+
+
 
 /*
   EXERCISE 2
@@ -37,7 +48,8 @@ function exercise1() {
 functionThatCallsBack(exercise2)
 
 function exercise2(result) {
-  // Write your implementation here
+    let exercise2 = document.querySelector('#exercise2');
+    exercise2.innerHTML = result; // Write your implementation here
 }
 
 /*
@@ -57,9 +69,9 @@ function exercise2(result) {
 */
 
 function exercise3(callback) {
-  // Write your implementation here
+    callback(`Hello from the callback`) // Write your implementation here
 
-  // Write your explanation here
+    // Write your explanation here
 }
 
 // 
@@ -71,9 +83,9 @@ function exercise3(callback) {
 // -------------------------------------
 //
 function functionThatCallsBack(callback) {
-  callback('Hello from the function caller')
+    callback('Hello from the function caller')
 }
 
 exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
+    document.querySelector('#exercise3').innerText = text
 })

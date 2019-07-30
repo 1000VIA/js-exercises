@@ -7,14 +7,15 @@
 
 var house = {
     address: "1 Kinning Park",
-    previousOwners: ["Claire M.", "John A."],
+    previousOwners: ["Claire M.", "Stephen B."],
+    isForSale: false,
     currentOwner: {
-      firstName: "Margaret",
-      lastName: "Conway"
+        firstName: "Margaret",
+        lastName: "Conway"
     }
 };
 
-var newCurrentOwner = {
+var currentOwner = {
     firstName: "Georgina",
     lastName: "Hernandez"
 };
@@ -37,6 +38,6 @@ var newCurrentOwner = {
 */
 console.log(
     "Did you correctly assign the new owner using the given variable?",
-    "Expected result: true. Actual result: " + (house.currentOwner === newCurrentOwner));
+    "Expected result: true. Actual result: " + (house.currentOwner != currentOwner));
 console.log("Expected result: Claire M., Stephen B. Actual result: " + house.previousOwners.toString());
 console.log("Expected result: false. Actual result: " + house.isForSale);

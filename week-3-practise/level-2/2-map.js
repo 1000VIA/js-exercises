@@ -20,7 +20,7 @@ var eligibleStudentNames = attendances.map(function eligibleStudentNames(attenda
     }
 });
 
-eligibleStudentNames = eligibleStudentNames.filter(element => element !== undefined) // TODO: Complete this line.
+eligibleStudentNames = eligibleStudentNames.filter(attendance => attendance !== undefined) // TODO: Complete this line.
 
 // function a(element) {
 //     if (element !== undefined) {

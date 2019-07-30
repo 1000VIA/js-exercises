@@ -13,8 +13,13 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
+let promise1g = document.querySelector('div #exercise1');
+
 function exercise1() {
-  var promise1 = resolvedPromise()
+    let promise1 = resolvedPromise();
+    promise1.then(function(value) {
+        promise1g.innerHTML = 'A Promising Promise ';
+    })
 }
 
 /*
@@ -27,7 +32,7 @@ function exercise1() {
   Promise"
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+    var promise2 = rejectedPromise()
 }
 
 /*
@@ -40,7 +45,7 @@ function exercise2() {
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+    var promise3 = delayedPromise()
 }
 
 /*
@@ -55,7 +60,7 @@ function exercise3() {
   YOUR NAME"
 */
 function exercise4() {
-  var promise4 = concatPromise()
+    var promise4 = concatPromise()
 }
 
 /*
@@ -72,7 +77,7 @@ function exercise4() {
 */
 
 function exercise5() {
-  // Write your implementation here
+    // Write your implementation here
 }
 
 /*
@@ -89,7 +94,7 @@ function exercise5() {
   wrong!"
 */
 function exercise6() {
-  // Write your implementation here
+    // Write your implementation here
 }
 
 
@@ -102,23 +107,23 @@ function exercise6() {
 // -------------------------------------
 //
 function resolvedPromise() {
-  return Promise.resolve('A Promising Promise')
+    return Promise.resolve('A Promising Promise')
 }
 
 function rejectedPromise() {
-  return Promise.reject('A Unpromising Promise')
+    return Promise.reject('A Unpromising Promise')
 }
 
 function delayedPromise() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('A Longer Promise')
-    }, 2000)
-  })
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('A Longer Promise')
+        }, 2000)
+    })
 }
 
 function concatPromise() {
-  return Promise.resolve('A Promise from: ')
+    return Promise.resolve('A Promise from: ')
 }
 
 exercise1()
