@@ -5,7 +5,7 @@
 */
 
 /*
-  EXERCISE 1 
+  EXERCISE 1
   =======
 
   Write a function that inserts your name into the #exercise1 element when
@@ -25,11 +25,11 @@ let button = document.querySelector('#button1');
 
 let myName = document.querySelector('#exercise1')
 
-button.addEventListener('click', function() {
-    myName.innerHTML = 'Milvia Alvarez Zabala'
-})
+button.addEventListener('click', getMyName)
 
-
+function getMyName() {
+    return myName.innerHTML = 'Milvia Alvarez Zabala'
+}
 
 /*
   EXERCISE 2
@@ -74,9 +74,9 @@ function exercise3(callback) {
     // Write your explanation here
 }
 
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //

@@ -13,13 +13,13 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
-let promise1g = document.querySelector('div #exercise1');
+const promise1g = document.querySelector('div #exercise1');
 
 function exercise1() {
-    let promise1 = resolvedPromise();
-    promise1.then(function(value) {
-        promise1g.innerHTML = 'A Promising Promise ';
-    })
+    const promise1 = resolvedPromise()
+        .then((value) => {
+            promise1g.innerHTML = value;
+        })
 }
 
 /*
@@ -31,8 +31,13 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "A Unpromising
   Promise"
 */
+const promise2g = document.querySelector('#exercise2');
+
 function exercise2() {
-    var promise2 = rejectedPromise()
+    const promise2 = rejectedPromise()
+        .catch((value) => {
+            promise2g.innerHTML = value;
+        })
 }
 
 /*
@@ -44,8 +49,13 @@ function exercise2() {
 
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
+const promise3g = document.querySelector('#exercise3');
+
 function exercise3() {
     var promise3 = delayedPromise()
+        .then((value) => {
+            promise3g.innerHTML = value;
+        })
 }
 
 /*
@@ -59,8 +69,14 @@ function exercise3() {
   EXPECTED RESULT: The #exercise4 element has textContent = "A Promise from:
   YOUR NAME"
 */
+
+const promise4g = document.querySelector('#exercise4');
+
 function exercise4() {
     var promise4 = concatPromise()
+        .then((value) => {
+            promise4g.innerHTML = value + 'Milvia Alvarez';
+        })
 }
 
 /*
@@ -76,8 +92,14 @@ function exercise4() {
   EXPECTED RESULT: The #exercise5 element has textContent = "Hello Promises!"
 */
 
+const promise5g = document.querySelector('#exercise5');
+
 function exercise5() {
-    // Write your implementation here
+    const promise = StretchGoalResolve()
+        .then((value) => {
+            promise5g.innerHTML = value;
+        })
+        // Write your implementation here
 }
 
 /*
@@ -93,14 +115,19 @@ function exercise5() {
   EXPECTED RESULT: The #exercise6 element has textContent = "Something went
   wrong!"
 */
+const promise6g = document.querySelector('#exercise6')
+
 function exercise6() {
-    // Write your implementation here
+    const promise = StretchGoalReject()
+        .catch((value) => {
+            promise6g.innerHTML = value;
+        }) // Write your implementation here
 }
 
 
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
@@ -124,6 +151,14 @@ function delayedPromise() {
 
 function concatPromise() {
     return Promise.resolve('A Promise from: ')
+}
+
+function StretchGoalResolve() {
+    return Promise.resolve('Hello Promises!')
+}
+
+function StretchGoalReject() {
+    return Promise.reject('Something went wrong!')
 }
 
 exercise1()
