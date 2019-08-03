@@ -38,6 +38,8 @@ const messageList = document.querySelector('#message-list');
 const container = document.createElement('Ul');
 
 function getNewElement(value) {
+    messageList.innerHTML = '';
+    container.innerHTML = '';
     value.forEach(element => {
         let elementLi = document.createElement('li');
         elementLi.innerHTML = `${element.datetime} ➡ ${element.content}`
