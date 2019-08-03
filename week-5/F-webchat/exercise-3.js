@@ -32,11 +32,11 @@ For example, print your name every 2 seconds.
 
 
 // Write your code here
-function myName() {
-    console.log('Milvia Alvarez Zabala');
-}
+// function myName() {
+//     console.log('Milvia Alvarez Zabala');
+// }
 
-setInterval(myName, 2000);
+// setInterval(myName, 2000);
 
 /*
 ========
