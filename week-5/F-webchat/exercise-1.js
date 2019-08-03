@@ -48,8 +48,12 @@ function getNewElement(value) {
     messageList.appendChild(container);
 }
 
-fetch(`https://codeyourfuture.herokuapp.com/api/messages`)
-    .then((response) =>
-        response.json())
-    .then((data) => getNewElement(data))
-    .catch((error) => error)
+function chatUpdate() {
+    fetch(`https://codeyourfuture.herokuapp.com/api/messages`)
+        .then((response) =>
+            response.json())
+        .then((data) => getNewElement(data))
+        .catch((error) => error)
+}
+chatUpdate();
+setInterval(chatUpdate, 2000);
