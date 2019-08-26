@@ -38,24 +38,48 @@ function changeThemeGreen() {
 
 const btnSubmit = document.querySelector("form > .btn.btn-primary");
 const input = document.querySelectorAll(".form-control");
-const textarea = document.querySelector("textarea");
+const form = document.querySelector("form");
+const inputArray = [...document.querySelectorAll(".form-control")];
 
 btnSubmit.addEventListener("click", validateInput);
 
 function validateInput(e) {
   e.preventDefault();
-  for (let i = 0; i < input.length; i++) {
-    if (
-      input[i].value.length === 0 ||
-      (input[0].value.includes("@") && textarea.value === "")
-    ) {
-      input[i].style.backgroundColor = "red";
-      console.log(input.value);
+  let isFormValidUno = true;
+  inputArray.forEach(function(input, index, array) {
+    if (input.value === "") {
+      isFormValidUno = false;
+      input.style.backgroundColor = "red";
     } else {
-      alert("thank you for filling out the form");
-      console.log(input.value);
+      input.style.backgroundColor = "";
     }
-    // input.value.reset();
+  });
+  if (isFormValidUno) {
+    alert("Gracias por llenar nuestro formulario");
+    form.reset();
+  } else {
+    alert("Hay errores en el formulario!");
   }
-  return input.value;
 }
+/**
+ * Actividad con FOR:
+ */
+// function validateInput(e) {
+//   e.preventDefault();
+//   let isFormValid = true;
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i].value === "") {
+//       isFormValid = false;
+//       input[i].style.backgroundColor = "red";
+//     } else {
+//       input[i].style.backgroundColor = "";
+//     }
+//   }
+//   if (isFormValid) {
+//     alert("Gracias por llenar nuestro formulario");
+//     form.reset();
+//   } else {
+//     alert("Hay errores en el formulario!");
+//   }
+// }
+//spread Operator
